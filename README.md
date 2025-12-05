@@ -77,6 +77,38 @@ Uses Java Swing components (JLabels, JTextFields, Buttons, JTextArea)
 
 
 ---
+## SQL QUERY
+
+CREATE TABLE patients (
+    PatientID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    DOB DATE,
+    Gender VARCHAR(10),
+    Phone VARCHAR(20),
+    Address VARCHAR(100),
+    AdmissionDate DATE
+),
+
+CREATE TABLE doctors (
+    DoctorID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Specialty VARCHAR(50),
+    Phone VARCHAR(15),
+    Email VARCHAR(50)
+),
+
+CREATE TABLE appointments (
+    AppointmentID INT AUTO_INCREMENT PRIMARY KEY,
+    PatientID int,
+    DoctorID int,
+    AppointmentDate DATE,
+    Description VARCHAR(100),
+    AppointmentStatus VARCHAR(50)
+);
+
+---
 ## ▶️ HOW TO RUN
 
 Make sure MySQL Server is running.
